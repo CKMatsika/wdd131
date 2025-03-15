@@ -1,0 +1,23 @@
+/* Styles for larger screens */
+
+/* Navigation styles for larger screens */
+#hamburger-btn, #close-btn {
+    display: none; /* Hide hamburger and close buttons on larger screens */
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+}
+
+nav a {
+    border-bottom: none;
+    padding: 0 1rem;
+}
+
+/* Temple grid styles for larger screens */
+.temple-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
