@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Norway - Land of the Fjords and Northern Lights">
+    <title>Norway - Land of the Fjords</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Norway</h1>
+        <p>Land of the Fjords and Northern Lights</p>
+    </header>
+
+    <main>
+        <!-- Hero Section with Responsive Images -->
+        <section class="hero">
+            <picture>
+                <source srcset="images/norway-small.webp" media="(max-width: 500px)">
+                <source srcset="images/norway-medium.webp" media="(max-width: 1000px)">
+                <img src="images/norway-large.webp" alt="Beautiful Norwegian fjord with mountains and clear blue water" width="1200" height="600">
+            </picture>
+        </section>
+
+        <!-- Country Statistics Section -->
+        <section class="statistics">
+            <h2>Country Statistics</h2>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <h3>Capital</h3>
+                    <p>Oslo</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Population</h3>
+                    <p>5.4 million</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Language</h3>
+                    <p>Norwegian</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Currency</h3>
+                    <p>Norwegian Krone (NOK)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Sections -->
+        <div class="content-wrapper">
+            <!-- Left Column -->
+            <section class="left-column">
+                <h2>About Norway</h2>
+                <p>Norway is a Scandinavian country known for its mountains, glaciers, and deep coastal fjords. Oslo, the capital, is a city of green spaces and museums. Preserved 9th-century Viking ships are displayed at Oslo's Viking Ship Museum.</p>
+                
+                <p>Norway is also famous for the Northern Lights (Aurora Borealis), which can be seen in the northern parts of the country during winter months. The country maintains a combination of stunning natural beauty and high standards of living.</p>
+                
+                <h2>Must-Visit Places</h2>
+                <ul>
+                    <li>Geirangerfjord - UNESCO World Heritage Site</li>
+                    <li>Pulpit Rock (Preikestolen)</li>
+                    <li>Tromsø - Gateway to the Arctic</li>
+                    <li>Lofoten Islands</li>
+                    <li>Bergen - Historic Harbor City</li>
+                </ul>
+            </section>
+
+            <!-- Right Column -->
+            <section class="right-column">
+                <h2>Weather</h2>
+                <div class="weather-box">
+                    <div class="weather-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="weather-svg">
+                            <path d="M17 18a5 5 0 0 0-10 0"></path>
+                            <line x1="12" y1="9" x2="12" y2="2"></line>
+                            <line x1="4.22" y1="10.22" x2="5.64" y2="11.64"></line>
+                            <line x1="1" y1="18" x2="3" y2="18"></line>
+                            <line x1="21" y1="18" x2="23" y2="18"></line>
+                            <line x1="18.36" y1="11.64" x2="19.78" y2="10.22"></line>
+                            <line x1="23" y1="22" x2="1" y2="22"></line>
+                            <polyline points="8 6 12 2 16 6"></polyline>
+                        </svg>
+                    </div>
+                    <div class="weather-info">
+                        <p>Temperature: <span id="temperature">2</span>°C</p>
+                        <p>Wind Speed: <span id="wind-speed">15</span> km/h</p>
+                        <p>Wind Chill: <span id="wind-chill">Calculating...</span></p>
+                        <p>Conditions: Partly Cloudy</p>
+                    </div>
+                </div>
+
+                <h2>Fun Facts</h2>
+                <div class="fun-facts">
+                    <p>Norway has the world's longest road tunnel, the Lærdal Tunnel, which is 24.5 km long.</p>
+                    <p>Norwegians consume the most pizza in the world per capita, after the United States.</p>
+                    <p>The Nobel Peace Prize ceremony is held annually in Oslo.</p>
+                    <p>Norway introduced salmon sushi to Japan in the 1980s.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> | Norway Travel Guide | Last Updated: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>

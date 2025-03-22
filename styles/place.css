@@ -1,0 +1,252 @@
+/* Global CSS Variables */
+:root {
+    /* Norwegian flag colors */
+    --primary-color: #ef2b2d;    /* Red */
+    --secondary-color: #002868;  /* Blue */
+    --accent-color: #ffffff;     /* White */
+    --text-color: #333333;
+    --background-color: #f9f9f9;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    /* Typography */
+    --heading-font: 'Helvetica Neue', Arial, sans-serif;
+    --body-font: 'Georgia', serif;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style-position: inside;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-style: italic;
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Statistics Section */
+.statistics {
+    background-color: var(--accent-color);
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.statistics h2 {
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.stat-item {
+    background-color: var(--background-color);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.stat-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+}
+
+.left-column, .right-column {
+    margin-bottom: 2rem;
+}
+
+.left-column h2, .right-column h2 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Weather Section */
+.weather-box {
+    background-color: var(--accent-color);
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-icon {
+    margin-bottom: 1rem;
+}
+
+.weather-svg {
+    color: var(--secondary-color);
+}
+
+.weather-info p {
+    margin-bottom: 0.5rem;
+}
+
+/* Fun Facts Section */
+.fun-facts {
+    background-color: var(--accent-color);
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+}
+
+.fun-facts p {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.fun-facts p::before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+/* Weather heading with weather icon in wider view */
+.right-column h2:first-of-type {
+    position: relative;
+}
+
+/* This is the pseudo element for the weather icon in wider view */
+.right-column h2:first-of-type::after {
+    content: "⛅";
+    display: none; /* Hidden in mobile view */
+    margin-left: 10px;
+    font-size: 1.5rem;
+}
+
+/* Media query for tablets and larger screens */
+@media screen and (min-width: 768px) {
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content-wrapper {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 2rem;
+    }
+
+    .weather-box {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .weather-icon {
+        margin-right: 1.5rem;
+        margin-bottom: 0;
+    }
+
+    /* Show the weather emoji in the heading at wider widths */
+    .right-column h2:first-of-type::after {
+        display: inline;
+    }
+
+    /* Hide the SVG weather icon in wider view */
+    .weather-svg {
+        display: none;
+    }
+}
+
+/* Media query for desktop */
+@media screen and (min-width: 1024px) {
+    .stats-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    header {
+        padding: 3rem 1rem;
+    }
+
+    header h1 {
+        font-size: 3.5rem;
+    }
+
+    .content-wrapper {
+        padding: 0 2rem;
+    }
+}
