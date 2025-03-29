@@ -1,0 +1,49 @@
+/* Styles for larger screens (min-width: 768px) */
+
+/* Header and navigation styles */
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#hamburger-btn {
+    display: none; /* Hide hamburger button on large screens */
+}
+
+#close-btn {
+    display: none; /* Hide close button on large screens */
+}
+
+nav {
+    display: flex !important; /* Always show nav on large screens */
+    flex-direction: row;
+    position: static;
+    width: auto;
+    background-color: transparent;
+}
+
+nav a {
+    border-bottom: none;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    border-radius: 4px;
+}
+
+/* Temple grid for larger screens */
+.temple-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* For even larger screens */
+@media (min-width: 992px) {
+    .temple-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* For extra large screens */
+@media (min-width: 1200px) {
+    .temple-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

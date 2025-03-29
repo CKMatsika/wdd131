@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Temple Album</title>
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css" media="(min-width: 768px)">
+    <script src="scripts/filtered-temples.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h2>Temple Album</h2>
+            <button id="hamburger-btn">≡</button>
+            <nav id="nav-menu">
+                <a href="#" id="home-link" class="active">Home</a>
+                <a href="#" id="old-link">Old</a>
+                <a href="#" id="new-link">New</a>
+                <a href="#" id="large-link">Large</a>
+                <a href="#" id="small-link">Small</a>
+                <button id="close-btn">X</button>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <h1>Home</h1>
+        
+        <div id="temple-grid" class="temple-grid">
+            <!-- Temple cards will be dynamically inserted here by JavaScript -->
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="current-year"></span> • Clemence Komborerai Matsika • Zimbabwe</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
