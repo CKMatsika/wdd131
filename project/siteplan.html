@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betterlink Systems - Website Planning Document</title>
+    <style>
+        /* Color Schema - Based on Official Logo */
+        :root {
+            --primary-color: #000000; /* Black from logo */
+            --secondary-color: #E74C18; /* Bright orange from logo flame */
+            --accent-color: #C41200; /* Deep red from logo flame */
+            --background-color: #F5F7FA; /* Light gray for backgrounds */
+            --text-color: #333333; /* Dark gray for main text */
+        }
+
+        /* Typography */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@500;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-top: 2rem;
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 1rem;
+            margin-top: 2rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color), var(--accent-color));
+        }
+
+        header h1 {
+            color: white;
+            border-bottom: none;
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .color-sample {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+
+        .color-card {
+            width: 200px;
+            height: 100px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .color-block {
+            height: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .color-info {
+            height: 30%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            border: 1px solid #ddd;
+        }
+
+        .font-sample {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .wireframes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .wireframe {
+            flex: 1;
+            min-width: 300px;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .wireframe img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .logo-image {
+            width: 150px;
+            height: 150px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .logo-text {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .scenario {
+            background-color: #f9f9f9;
+            border-left: 3px solid var(--secondary-color);
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+            background-image: linear-gradient(to right, var(--primary-color), var(--accent-color), var(--secondary-color));
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .wireframes {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Website Planning Document</h1>
+    </header>
+
+    <main>
+        <section id="site-name">
+            <h2>1. Site Name</h2>
+            <div class="logo" style="text-align: center;">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDwhLS0gQmV0dGVybGluayBMb2dvIFJlcHJlc2VudGF0aW9uIC0tPgogICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAsIDEwKSI+CiAgICAgICAgPCEtLSBTdHlsaXplZCAnQicgLS0+CiAgICAgICAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjMDAwMDAwIiByeD0iNCIgLz4KICAgICAgICA8IS0tIEZsYW1lIGVsZW1lbnRzIC0tPgogICAgICAgIDxwYXRoIGQ9Ik00MCwwIEM2MCwxMCA3MCwzMCA2MCw2MCBDNTAsODAgMzAsOTAgMTAsODUgQzQwLDcwIDUwLDUwIDQwLDMwIEMzNSwyMCAyMCwxNSAxMCwzMCBDMTUsMTAgMzAsLTUgNDAsMCBaIiBmaWxsPSIjRTc0QzE4IiAvPgogICAgICAgIDxwYXRoIGQ9Ik0zNSw1IEMzNSw1IDUwLDMwIDQ1LDUwIEM0MCw3MCAyNSw4MCAwLDgwIEMxNSw2NSAyNSw1MCAxMCwzMCBDMTAsMjAgMTUsMTAgMzUsNSBaIiBmaWxsPSIjQzQxMjAwIiAvPgogICAgPC9nPgogICAgCiAgICA8IS0tIEJldHRlcmxpbmsgSW5kdXN0cmllcyBUZXh0IC0tPgogICAgPHRleHQgeD0iNDAiIHk9IjExMCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iYm9sZCI+QmV0dGVybGluazwvdGV4dD4KICAgIDx0ZXh0IHg9IjQwIiB5PSIxMjUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iI0M0MTIwMCI+SW5kdXN0cmllczwvdGV4dD4KICAgIAogICAgPCEtLSB0L2EgQmV0dGVybGluayBTeXN0ZW1zIFRleHQgLS0+CiAgICA8dGV4dCB4PSIyNDAiIHk9IjkwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiPnQvYTwvdGV4dD4KICAgIDx0ZXh0IHg9IjIyMCIgeT0iMTgwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDAiIGZvbnQtd2VpZ2h0PSJib2xkIj5CZXR0bGluayBTeXN0ZW1zPC90ZXh0PgogICAgPHRleHQgeD0iMjIwIiB5PSIxODAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0MCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M0MTIwMCIgc3Ryb2tlLXdpZHRoPSIxIj5CZXR0bGluayBTeXN0ZW1zPC90ZXh0Pgo8L3N2Zz4=" alt="Betterlink Systems Logo" style="max-width: 90%; height: auto;">
+            </div>
+            <p>The Betterlink Systems brand, as shown in the logo, represents the company's mission of creating better connections between educational institutions, local authorities, and their stakeholders through innovative technological solutions. Operating as "Betterlink Systems" (trading as from Betterlink Industries), the name conveys:</p>
+            <ul>
+                <li><strong>Better</strong> - Emphasizing the improvement and optimization our systems provide</li>
+                <li><strong>Link</strong> - Highlighting the connectivity and integration aspects of our solutions</li>
+                <li><strong>Systems</strong> - Directly stating our focus on comprehensive technological systems</li>
+            </ul>
+            <p>A potential domain name would be <strong>betterlinksystems.com</strong>, which is straightforward, memorable, and clearly represents the company's identity.</p>
+        </section>
+
+        <section id="site-purpose">
+            <h2>2. Site Purpose</h2>
+            <p>The Betterlink Systems website serves as a comprehensive digital platform to showcase our specialized solutions for educational institutions and local authorities. The site aims to:</p>
+            <ul>
+                <li>Establish Betterlink Systems as an industry leader in educational technology and ERP solutions</li>
+                <li>Clearly communicate our service offerings and their benefits to potential clients</li>
+                <li>Demonstrate our expertise through case studies, testimonials, and technical insights</li>
+                <li>Provide interactive demonstrations of our systems' capabilities</li>
+                <li>Generate qualified leads through strategic calls-to-action and contact forms</li>
+                <li>Offer valuable educational content through our blog to establish thought leadership</li>
+                <li>Create a user-friendly platform for existing clients to access support resources</li>
+            </ul>
+            <p>The website will be designed to cater to decision-makers in educational institutions and local government bodies who are looking for efficient, reliable, and innovative technological solutions to streamline their operations.</p>
+        </section>
+
+        <section id="scenarios">
+            <h2>3. Scenarios</h2>
+            <h3>Target Audience Scenarios:</h3>
+            
+            <div class="scenario">
+                <p><strong>School Administrator Scenario:</strong> "Our school district is struggling with managing student data across multiple platforms. What specific educational management systems does Betterlink offer that could help us consolidate our data and improve administrative efficiency?"</p>
+            </div>
+            
+            <div class="scenario">
+                <p><strong>Local Authority IT Director Scenario:</strong> "We're looking to upgrade our outdated ERP system for our municipality. Can I see examples of successful implementations Betterlink has completed for similar local authorities, and what ROI they achieved?"</p>
+            </div>
+            
+            <div class="scenario">
+                <p><strong>University Technology Officer Scenario:</strong> "We need a system that can integrate with our existing infrastructure. How customizable are Betterlink's solutions, and what is the implementation process like for higher education institutions?"</p>
+            </div>
+            
+            <div class="scenario">
+                <p><strong>School District Finance Director Scenario:</strong> "What kind of support and training does Betterlink provide after system implementation? We need to ensure our staff can effectively use any new technology we invest in."</p>
+            </div>
+        </section>
+
+        <section id="color-schema">
+            <h2>4. Color Schema</h2>
+            <p>The color scheme for Betterlink Systems reflects professionalism, trust, and innovation while maintaining accessibility standards:</p>
+            
+            <div class="color-sample">
+                <div class="color-card">
+                    <div class="color-block" style="background-color: #000000;">#000000</div>
+                    <div class="color-info">Primary Color</div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-block" style="background-color: #E74C18;">#E74C18</div>
+                    <div class="color-info">Secondary Color</div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-block" style="background-color: #C41200;">#C41200</div>
+                    <div class="color-info">Accent Color</div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-block" style="background-color: #F5F7FA; color: #333;">#F5F7FA</div>
+                    <div class="color-info">Background Color</div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-block" style="background-color: #333333;">#333333</div>
+                    <div class="color-info">Text Color</div>
+                </div>
+            </div>
+            
+            <h3>Color Usage:</h3>
+            <ul>
+                <li><strong>Primary Color (#000000):</strong> Will be used for the main navigation, headings, and text elements to match the black elements in the logo and establish brand identity.</li>
+                <li><strong>Secondary Color (#E74C18):</strong> Will be applied to secondary elements, hover states, icons, and subtle highlights to match the bright orange flame in the logo.</li>
+                <li><strong>Accent Color (#C41200):</strong> Reserved for call-to-action buttons, important highlights, and elements requiring immediate attention to match the deep red elements in the logo.</li>
+                <li><strong>Background Color (#F5F7FA):</strong> Used for page backgrounds to create a clean, professional look while providing sufficient contrast with text.</li>
+                <li><strong>Text Color (#333333):</strong> Used for body text to ensure readability while being slightly softer than pure black.</li>
+            </ul>
+        </section>
+
+        <section id="typography">
+            <h2>5. Typography</h2>
+            <p>The typography selection balances professionalism with readability across different devices:</p>
+            
+            <div class="font-sample">
+                <h3 style="font-family: 'Montserrat', sans-serif;">Montserrat (Headings)</h3>
+                <p style="font-family: 'Montserrat', sans-serif; font-size: 1.2rem;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>1234567890</p>
+                <p>Montserrat will be used for all headings (h1-h3) to create a modern, authoritative presence. Its clean lines and good readability at larger sizes make it ideal for section titles and important information.</p>
+            </div>
+            
+            <div class="font-sample">
+                <h3 style="font-family: 'Roboto', sans-serif;">Roboto (Body Text)</h3>
+                <p style="font-family: 'Roboto', sans-serif; font-size: 1.2rem;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>1234567890</p>
+                <p>Roboto will be used for all body text, navigation items, buttons, and general interface elements. Its excellent readability at various sizes makes it perfect for detailed information and instructions.</p>
+            </div>
+            
+            <h3>Font Usage:</h3>
+            <ul>
+                <li><strong>Montserrat (Bold):</strong> Main headings (h1), page titles</li>
+                <li><strong>Montserrat (Medium):</strong> Subheadings (h2, h3)</li>
+                <li><strong>Roboto (Regular):</strong> Body text, paragraphs, lists</li>
+                <li><strong>Roboto (Light):</strong> Captions, secondary information</li>
+                <li><strong>Roboto (Bold):</strong> Emphasis, navigation items, buttons</li>
+            </ul>
+        </section>
+
+        <section id="wireframe">
+            <h2>6. Wireframe</h2>
+            <p>The wireframes below illustrate the proposed layout for the Betterlink Systems homepage in both desktop and mobile views:</p>
+            
+            <div class="wireframes">
+                <div class="wireframe">
+                    <h3>Desktop View</h3>
+                    <svg width="100%" height="600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+                        <!-- Header -->
+                        <rect x="0" y="0" width="800" height="80" fill="#000000" />
+                        <rect x="20" y="20" width="150" height="40" fill="#FFF" rx="5" />
+                        <line x1="550" y1="40" x2="580" y2="40" stroke="#FFF" stroke-width="2" />
+                        <line x1="600" y1="40" x2="630" y2="40" stroke="#FFF" stroke-width="2" />
+                        <line x1="650" y1="40" x2="680" y2="40" stroke="#FFF" stroke-width="2" />
+                        <line x1="700" y1="40" x2="780" y2="40" stroke="#FFF" stroke-width="2" />
+                        
+                        <!-- Hero Section -->
+                        <rect x="0" y="80" width="800" height="300" fill="#E74C18" opacity="0.2" />
+                        <rect x="150" y="150" width="500" height="50" fill="#FFF" opacity="0.7" />
+                        <rect x="250" y="220" width="300" height="80" fill="#FFF" opacity="0.7" />
+                        <rect x="300" y="320" width="200" height="40" fill="#C41200" rx="5" />
+                        
+                        <!-- Services Section -->
+                        <rect x="0" y="400" width="800" height="60" fill="#F5F7FA" />
+                        <rect x="300" y="410" width="200" height="40" fill="#FFF" opacity="0.7" />
+                        
+                        <rect x="50" y="480" width="340" height="200" fill="#FFF" stroke="#DDD" />
+                        <rect x="410" y="480" width="340" height="200" fill="#FFF" stroke="#DDD" />
+                        
+                        <!-- Case Studies -->
+                        <rect x="0" y="700" width="800" height="60" fill="#F5F7FA" />
+                        <rect x="300" y="710" width="200" height="40" fill="#FFF" opacity="0.7" />
+                        
+                        <rect x="50" y="780" width="220" height="150" fill="#FFF" stroke="#DDD" />
+                        <rect x="290" y="780" width="220" height="150" fill="#FFF" stroke="#DDD" />
+                        <rect x="530" y="780" width="220" height="150" fill="#FFF" stroke="#DDD" />
+                        
+                        <!-- Footer -->
+                        <rect x="0" y="950" width="800" height="50" fill="#000000" />
+                    </svg>
+                </div>
+                
+                <div class="wireframe">
+                    <h3>Mobile View</h3>
+                    <svg width="100%" height="800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 1400">
+                        <!-- Header -->
+                        <rect x="0" y="0" width="400" height="60" fill="#000000" />
+                        <rect x="20" y="15" width="100" height="30" fill="#FFF" rx="5" />
+                        <rect x="350" y="15" width="30" height="30" fill="#FFF" opacity="0.5" />
+                        
+                        <!-- Hero Section -->
+                        <rect x="0" y="60" width="400" height="250" fill="#E74C18" opacity="0.2" />
+                        <rect x="50" y="100" width="300" height="40" fill="#FFF" opacity="0.7" />
+                        <rect x="75" y="150" width="250" height="60" fill="#FFF" opacity="0.7" />
+                        <rect x="100" y="230" width="200" height="40" fill="#C41200" rx="5" />
+                        
+                        <!-- Services Section -->
+                        <rect x="0" y="330" width="400" height="60" fill="#F5F7FA" />
+                        <rect x="100" y="340" width="200" height="40" fill="#FFF" opacity="0.7" />
+                        
+                        <rect x="30" y="410" width="340" height="180" fill="#FFF" stroke="#DDD" />
+                        <rect x="30" y="610" width="340" height="180" fill="#FFF" stroke="#DDD" />
+                        
+                        <!-- Case Studies -->
+                        <rect x="0" y="810" width="400" height="60" fill="#F5F7FA" />
+                        <rect x="100" y="820" width="200" height="40" fill="#FFF" opacity="0.7" />
+                        
+                        <rect x="30" y="890" width="340" height="150" fill="#FFF" stroke="#DDD" />
+                        <rect x="30" y="1060" width="340" height="150" fill="#FFF" stroke="#DDD" />
+                        <rect x="30" y="1230" width="340" height="150" fill="#FFF" stroke="#DDD" />
+                        
+                        <!-- Footer -->
+                        <rect x="0" y="1400" width="400" height="50" fill="#000000" />
+                    </svg>
+                </div>
+            </div>
+            
+            <h3>Wireframe Key Elements:</h3>
+            <ul>
+                <li><strong>Header:</strong> Logo on left, navigation menu on right (hamburger menu for mobile)</li>
+                <li><strong>Hero Section:</strong> Bold headline, supporting text, and prominent call-to-action button</li>
+                <li><strong>Services Section:</strong> Two-column layout for desktop (single column for mobile) featuring educational systems and ERP solutions</li>
+                <li><strong>Case Studies:</strong> Three featured case studies in a row for desktop (stacked for mobile)</li>
+                <li><strong>Additional sections (not shown in detail):</strong> Testimonials, interactive demo section, blog highlights, and contact form</li>
+                <li><strong>Footer:</strong> Company information, sitemap links, social media, and contact details</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Betterlink Systems - Website Planning Document - Created for Web Development Course</p>
+    </footer>
+</body>
+</html>
