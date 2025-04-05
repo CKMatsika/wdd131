@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="Review submission confirmation">
+    <meta name="author" content="Your Name">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Review Confirmation</h1>
+        </header>
+
+        <main class="confirmation">
+            <div class="confirmation-card">
+                <h2>Thank You for Your Review!</h2>
+                <p>We appreciate your feedback on our products.</p>
+                
+                <!-- Display submitted information -->
+                <div class="submitted-info">
+                    <h3>Your Review Details:</h3>
+                    <ul id="reviewDetails">
+                        <!-- Will be populated by JavaScript -->
+                    </ul>
+                </div>
+                
+                <div class="counter">
+                    <p>You have submitted <span id="reviewCount">0</span> reviews so far.</p>
+                </div>
+                
+                <a href="form.html" class="back-btn">Return to Review Form</a>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy;<span id="currentYear"></span> Betterlink Industries</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </footer>
+    </div>
+    <link rel="stylesheet" href="styles/form.css">
+    <!-- At the end of the file -->
+    <script src="scripts/form-review.js"></script>
+
+</body>
+</html>
