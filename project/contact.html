@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Betterlink Systems for innovative solutions for educational institutions and local authorities.">
+    <title>Contact Us | Betterlink Systems</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/betterlink-logo.svg" alt="Betterlink Systems Logo" width="180" height="60">
+                </a>
+            </div>
+            <nav>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch with our team to discuss how we can help your institution</p>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Get In Touch</h2>
+                        <p>We're here to answer any questions you have about our services. Reach out to us and we'll respond as soon as we can.</p>
+                        
+                        <div class="contact-info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Our Location</h3>
+                                <p>51a Steven Drive, Msasa<br>Harare, Zimbabwe</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Phone Number</h3>
+                                <p>(263) 779-613-700</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email Address</h3>
+                                <p>info@betterlinksystems.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3>Office Hours</h3>
+                                <p>Monday - Friday: 8:00 AM - 5:00 PM<br>
+                                Saturday & Sunday: Closed</p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h2>Send Us a Message</h2>
+                        <p>Fill out the form below and a member of our team will get back to you shortly.</p>
+                        
+                        <div class="form-messages" id="form-messages"></div>
+                        
+                        <form id="contactForm" novalidate>
+                            <div class="form-group">
+                                <label for="name" class="form-label">Your Name*</label>
+                                <input type="text" id="name" name="name" class="form-input" required>
+                                <div class="error-text" id="name-error"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address*</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                                <div class="error-text" id="email-error"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="organization" class="form-label">Organization*</label>
+                                <input type="text" id="organization" name="organization" class="form-input" required>
+                                <div class="error-text" id="organization-error"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="interest" class="form-label">I'm interested in*</label>
+                                <select id="interest" name="interest" class="form-select" required>
+                                    <option value="">Please select</option>
+                                    <option value="Educational Management Systems">Educational Management Systems</option>
+                                    <option value="ERP Solutions">ERP Solutions for Local Authorities</option>
+                                    <option value="Training & Support">Training & Support</option>
+                                    <option value="Consultation Services">Consultation Services</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <div class="error-text" id="interest-error"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Your Message*</label>
+                                <textarea id="message" name="message" class="form-textarea" required></textarea>
+                                <div class="error-text" id="message-error"></div>
+                            </div>
+                            
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="consent" name="consent" required>
+                                <label for="consent">I agree to the privacy policy and consent to being contacted about Betterlink services.</label>
+                                <div class="error-text" id="consent-error"></div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" id="submit-button">Submit Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="map-section">
+            <div class="container">
+                <h2 class="section-title">Find Us</h2>
+                <div class="map-container">
+                    <!-- Google Maps iframe embedding the actual location -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3796.7726519347364!2d31.113554476375433!3d-17.839427579315286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931a5d0c15c7f19%3A0x55d9ed63cc9ccf58!2s51a%20Steven%20Dr%2C%20Msasa%2C%20Harare%2C%20Zimbabwe!5e0!3m2!1sen!2sus!4v1681376545789!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/betterlink-logo-white.svg" alt="Betterlink Systems Logo" width="150" height="50">
+                    <p>Creating better connections through innovative technological solutions.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-nav">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="solutions.html">Solutions</a></li>
+                            <li><a href="case-studies.html">Case Studies</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="solutions.html#education">Educational Systems</a></li>
+                            <li><a href="solutions.html#erp">ERP Solutions</a></li>
+                            <li><a href="solutions.html#support">Training & Support</a></li>
+                            <li><a href="solutions.html#consultation">Consultation</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> 51a Steven Drive, Msasa, Harare</p>
+                        <p><i class="fas fa-phone"></i> (263) 779-613-700</p>
+                        <p><i class="fas fa-envelope"></i> info@betterlinksystems.com</p>
+                    </address>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Betterlink Systems. All rights reserved.</p>
+                <p><a href="references.html">References</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+            </div>
+            <div id="theme-switcher">
+                <button id="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>
